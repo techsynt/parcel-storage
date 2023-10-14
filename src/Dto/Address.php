@@ -6,11 +6,11 @@ namespace App\Dto;
 final class Address
 {
     public function __construct(
-        public readonly string $County,
-        public readonly string $City,
-        public readonly string $Street,
-        public readonly ?string $HouseNumber,
-        public readonly ?string $ApartmentNumber
+        public readonly string $county,
+        public readonly string $city,
+        public readonly string $street,
+        public readonly ?string $houseNumber,
+        public readonly ?string $apartmentNumber
     ) {
     }
 }

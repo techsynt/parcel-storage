@@ -7,14 +7,16 @@ namespace App\Controller;
 use OpenApi\Attributes as OA;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ParcelAddController extends AbstractController
 {
     #[OA\Tag(name: 'Parcel')]
     #[Route('/api/parcel', name: 'api_parcel_add', methods: 'POST')]
-    public function __invoke(): JsonResponse
+    public function __invoke(Request $request): JsonResponse
     {
+        $content = $request->getContent();
         return $this->json([
             'message' => 'Необходимо реализовать',
         ]);
