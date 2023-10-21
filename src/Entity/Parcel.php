@@ -15,15 +15,15 @@ class Parcel
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\ManyToOne(inversedBy: 'parcels')]
+    #[ORM\ManyToOne(cascade: ['persist'], inversedBy: 'parcels', fetch: 'EAGER' )]
     #[ORM\JoinColumn(nullable: false)]
     private ?Sender $sender = null;
 
-    #[ORM\ManyToOne(inversedBy: 'parcels')]
+    #[ORM\ManyToOne(cascade: ['persist'], inversedBy: 'parcels', fetch: 'EAGER')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Recipient $recipient = null;
 
-    #[ORM\ManyToOne(inversedBy: 'parcels')]
+    #[ORM\ManyToOne(cascade: ['persist'], inversedBy: 'parcels', fetch: 'EAGER')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Dimensions $dimensions = null;
 

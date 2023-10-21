@@ -21,7 +21,7 @@ class Recipient
     #[ORM\JoinColumn(nullable: false)]
     private ?FullName $fullName = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, unique: true)]
     private ?string $phone = null;
 
     #[ORM\OneToOne(inversedBy: 'recipient', cascade: ['persist', 'remove'])]
