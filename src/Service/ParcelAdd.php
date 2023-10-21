@@ -34,7 +34,6 @@ class ParcelAdd
         $this->fullNameRepository = $fullNameRepository;
     }
 
-
     public function add(): JsonResponse
     {
         /** @var ParcelDto $parcelDto */
